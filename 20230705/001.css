@@ -1,0 +1,8 @@
+body {
+    background-color: seagreen;
+}
+
+* {
+    border: 2px solid sandybrown;
+    padding: 10px;
+}

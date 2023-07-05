@@ -1,0 +1,22 @@
+#title {
+    text-decoration: underline;
+}
+
+.my {
+    color: slateblue;
+}
+h2+p{
+    color:blueviolet;
+}
+
+.my+p {
+    color:brown;
+}
+
+.sect2>strong {
+    background-color: yellow;
+}
+
+.sect2 *{
+    border: 2px solid red;
+}
