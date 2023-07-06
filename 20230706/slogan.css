@@ -1,0 +1,22 @@
+
+body {
+    background-color: rgb(255, 244, 229);
+    text-align: center;
+    font-family: 'Source Code Pro', monospace;
+}
+
+h1 {
+    color: rgb(211, 144, 237);
+}
+
+p {
+    color:gray;
+}
+
+strong {
+    background-color: rgb(235, 200, 235);
+    text-decoration-line: underline;
+    text-decoration-color: yellow;
+    text-decoration-style: wavy;
+}
+
