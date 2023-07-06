@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>가상요소</title>
-
     <style>
+      /*
+      <p></p> 태그처럼 닫는 요소는 after와 before를 줄 수 있지만
+      <img><br><input>과 같이 닫지 않는 요소는 어디가 앞인지, 뒤인지 
+      분간이 안 되기 때문에 사용할 수 없다.
+      */
       p::before {
         content: "여러분 ";
       }
