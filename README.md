@@ -4,4 +4,4 @@
 
 I am going to write and commit it every single day!
 
-Keep practicing, ###Jieun!👩🏻‍💻
+Keep practicing, ### Jieun!👩🏻‍💻
