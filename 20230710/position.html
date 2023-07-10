@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position</title>
+    <style>
+      /* 
+        position의 relative가 요소 순서대로의 기준이 된다고 생각했는데
+        그게 아니였다. absolute나 fixed 속성을 가진 경우 요소가 기존 자리에서 
+        사라지고 자리를 잡게 된다. 즉 카운트 대상이 아니게 된다.
+        이 코드에서는 relative 속성인 box2가 맨 앞에 위치할 것이고, 
+        맨 첫줄 기준으로 지정된 left, top 값으로 포지션한다.
+        relative 속성인 box3를 하나 더 추가하면 두번째줄에 위치할 것이고,
+        두번째줄 기준으로 지정된 left, top 값에 포지션 한다.
+      */
+      body {
+        height: 200vh;
+      }
+
+      .box {
+        /* display: inline-block; */
+        width: 100px;
+        height: 100px;
+        background-color: rgba(65, 105, 225, 0.8);
+        color: white;
+      }
+
+      .relative {
+        position: relative;
+        top: 40px;
+        left: 40px;
+        right: 10px;
+      }
+
+      .relative1 {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+      }
+
+      .absoulte {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .parent {
+        /* position: relative; */
+      }
+
+      .fixed {
+        position: fixed;
+        right: 10px;
+        bottom: 10px;
+      }
+
+      .sticky {
+        position: sticky;
+        top: 10px;
+        left: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="parent">
+      <div class="box fixed">box5</div>
+      <div class="box absoulte">box1</div>
+      <div class="box relative">box2</div>
+      <div class="box relative1">box3</div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id modi ut
+      officia enim numquam beatae vero? Odit veritatis ut temporibus nisi
+      provident unde dolore maiores modi porro obcaecati, quaerat voluptatem?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id modi ut
+      officia enim numquam beatae vero? Odit veritatis ut temporibus nisi
+      provident unde dolore maiores modi porro obcaecati, quaerat voluptatem?
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Id modi ut
+      officia enim numquam beatae vero? Odit veritatis ut temporibus nisi
+      provident unde dolore maiores modi porro obcaecati, quaerat voluptatem?
+    </div>
+    <div class="box sticky">box4</div>
+  </body>
+</html>
