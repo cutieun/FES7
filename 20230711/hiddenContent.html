@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>텍스트 숨김처리</title>
     <style>
+      /*
+        1. display:none, visibility:hidden - 모든 사용자에게 콘텐츠 숨김, 스크린리더기에서 무시됨
+        2. width:0px; height:0px - 대부분의 스크린 리더기가 읽지 않음. 악의적인것으로 해석되어 검색 엔진에 불이익 줄 수 있음.
+        3. text-indent:-9999px; - 스키린리더기가 읽음, 포커스가 될 수 있지만 페이지에는 표시되지 않음.
+      */
       .hidden {
         /* display: none; */
         /* visibility: hidden; */
@@ -16,6 +21,10 @@
         /* text-indent: -9999px; */
       }
 
+      /* 
+        제일 추천되는 방법. 
+        clip은 구 버전의 브라우저 대응을 위해서, clip-path는 최신 버전의 브라우저를 위해서 두개 다 기입.
+      */
       .a11y-hidden {
         clip: rect(1px, 1px, 1px, 1px);
         clip-path: inset(50%);
