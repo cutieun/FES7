@@ -1,0 +1,84 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Pretendard-Regular', sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin:0;
+}
+
+h3 {
+    font-family: 'Pretendard-Bold', sans-serif;
+    font-size: 16px;
+}
+p {
+    font-size: 12px;
+    color:#5A6A72;
+}
+article {
+    width: 288px;
+    height: 374px;
+    border: 1px solid #d8ddde;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.10);
+    
+}
+
+.content{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.desk {
+    width: 100%;
+    aspect-ratio: 288/196;
+    object-fit: cover;
+    
+}
+
+.div-profile{
+    margin:10px;
+    display:flex;
+    gap: 20px;
+    align-items: center;
+}
+.profile {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.imgs {
+    display: flex;
+    gap: 50%;
+    vertical-align: middle;
+}
+
+.imgs>a {
+    font-size: 14px;
+    text-decoration: underline;
+}
+.btn-group button{
+    background: none;
+    border: none;
+    width: 32px;
+}
