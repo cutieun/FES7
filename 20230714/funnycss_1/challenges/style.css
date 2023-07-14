@@ -1,0 +1,35 @@
+h1, p, img {
+    margin: initial;
+}
+
+body {
+    background-image: url('./images/bg.png');
+}
+
+.box {
+    width: 300px;
+    background-color: #9C6035;
+    display: block;
+    margin: 0 auto;
+    border-bottom: 10px solid #46260E;
+    border-radius: 0 0 30px 30px;
+    color: #E8BC9C;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.profile {
+    display: block;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #FFF;
+    font-size: 36px;
+    font-weight: 700;
+    margin: 10px 20px;
+}
+
+p {
+    margin: 10px 20px 30px;
+}
