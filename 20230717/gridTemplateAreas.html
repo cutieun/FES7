@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout</title>
+    <style>
+      .container {
+        width: 300px;
+        height: 300px;
+        background-color: #eee;
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-rows: 2fr 1fr 2fr;
+        grid-template-areas:
+          "blue blue yellow"
+          "purple orange yellow"
+          "salmon green green";
+        gap: 8px;
+      }
+      .blue {
+        grid-area: blue;
+        background-color: blue;
+      }
+      .yellow {
+        grid-area: yellow;
+        background-color: yellow;
+      }
+      .purple {
+        grid-area: purple;
+        background-color: purple;
+      }
+      .orange {
+        grid-area: orange;
+        background-color: orange;
+      }
+      .salmon {
+        grid-area: salmon;
+        background-color: salmon;
+      }
+      .green {
+        grid-area: green;
+        background-color: green;
+      }
+
+      /* 글자 가운데 정렬 */
+      .container div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="blue">blue</div>
+      <div class="yellow">yellow</div>
+      <div class="purple">purple</div>
+      <div class="orange">orange</div>
+      <div class="salmon">salmon</div>
+      <div class="green">green</div>
+    </div>
+  </body>
+</html>
