@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      p {
+        margin: 0;
+        /* height: 100%; */
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: minmax(150px, auto) 150px 150px;
+        grid-template-rows: minmax(150px, auto) 200px;
+        gap: 10px;
+        width: 600px;
+        height: 600px;
+        border: 2px solid #000;
+        align-content: center;
+        justify-content: center;
+      }
+
+      .container > div {
+        background: #eee;
+      }
+
+      .container p {
+        font-weight: bold;
+        background: skyblue;
+      }
+
+      .start {
+        align-self: start;
+        justify-self: start;
+      }
+
+      .center {
+        align-self: center;
+        justify-self: center;
+      }
+
+      .end {
+        align-self: end;
+        justify-self: end;
+      }
+
+      .stretch {
+        align-self: stretch;
+        justify-self: stretch;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="start">
+        <p>start<br />start</p>
+      </div>
+      <div class="center">
+        <p>center<br />center</p>
+      </div>
+      <div class="end">
+        <p>end<br />end</p>
+      </div>
+      <div class="stretch">
+        <p>stretch<br />stretch</p>
+      </div>
+    </div>
+  </body>
+</html>
