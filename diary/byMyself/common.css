@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    background-color: #FFFAF0;
+    margin: 0;
+}
+.max-width {
+    width: 1284px;
+    max-width: calc(100% - 60px);
+    margin: auto;
+}
+h1 {
+    width: 156px;
+    padding: 0;
+    margin: 0;
+}
+img {
+    vertical-align: top;
+}
+header {
+    background-color: white;
+}
+.header .max-width {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .join {
+    display: inline-flex;
+    height: 40px;
+    padding: 0 20px 0 52px;
+    background-image: url(../img/icon-join.svg);
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: 10px 50%;
+    align-items: center;
+}
+.header .login {
+    display: inline-flex;
+    height: 40px;
+    padding: 0 20px 0 52px;
+    background-image: url(../img/icon-login.svg);
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: 10px 50%;
+    align-items: center;
+}
+.main-title {
+    width: 250px;
+    margin: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+.main-title strong { 
+    display: block;
+    margin: 40px auto;
+    width: fit-content;
+    font-family: 'Pretendard-Bold';
+    box-shadow: inset 0 -0.5em 0 rgba(255, 79, 110, 0.2);
+    border-bottom: 2px solid #FF4F6E;
+}
+label {
+    display: block;
+}
+.form {
+    width: 392px;
+    margin: 0 auto;
+}
+.form label {
+    font-size: 14px;
+    color: #29363D;
+    margin-bottom: 8px;
+}
+.form input {
+    width: 392px;
+    height: 48px;
+    border: 0;
+    border-radius: 4px 4px 0 0;
+    border-bottom: 1px solid #677880;
+    margin-bottom: 24px;
+}
+.btn {
+    width: 392px;
+    height: 48px;
+    border: none;
+    background-color: #29363D;
+    color: #f4f5f5;
+    border-radius: 4px;
+    font-family: 'Pretendard-Bold';
+    margin-bottom: 40px;
+}
+footer {
+    color: #677880;
+    text-align: center;
+    font-size: 12px;
+}

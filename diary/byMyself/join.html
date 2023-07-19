@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인 | 두근두근 비밀일기</title>
+    <link rel="stylesheet" href="./common.css" />
+  </head>
+  <body>
+    <!-- 1. 헤더 -->
+    <header class="header">
+      <div class="max-width">
+        <h1>
+          <a href="./">
+            <img src="../img/logo.svg" />
+          </a>
+        </h1>
+        <a class="login">로그인</a>
+      </div>
+    </header>
+    <!-- 2. 메인 -->
+    <main class="max-width">
+      <h2 class="main-title">
+        <img src="../img/logo.svg" />
+        <strong>회원가입</strong>
+      </h2>
+      <form class="form">
+        <div class="email">
+          <label for="user-email">이메일</label>
+          <input id="user-email" type="email" />
+        </div>
+        <div class="pw">
+          <label for="user-pw">비밀번호</label>
+          <input id="user-pw" type="password" />
+        </div>
+        <div class="nickname">
+          <label for="user-nick">닉네임</label>
+          <input id="user-nick" type="text" />
+        </div>
+        <button class="btn" type="sumit">회원가입</button>
+      </form>
+    </main>
+    <!-- 3. 푸터 -->
+    <footer>
+      <p>Copyright 2023.</p>
+    </footer>
+  </body>
+</html>
