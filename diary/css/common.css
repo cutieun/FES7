@@ -15,9 +15,12 @@
 body {
     margin: 0;
 }
-h1 {
+h1,
+h2,
+h3 {
     margin: 0;
     padding: 0;
+    font: inherit;
 }
 img {
     /* 베이스라인 때문에 이미지 하단에 나오는 빈 공간을 초기화하기 위함. 
@@ -33,11 +36,43 @@ button {
     font:inherit;
 }
 
+button {
+    border: 0;
+    background: none;
+}
+
+button:enabled {
+    cursor: pointer;
+}
+
+ol,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+p{
+    margin: 0;
+}
+
 /*----------------------- CSS 적용 -----------------------*/
+.a11y-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
 body {
     font-family: 'Pretendard-Regular', sans-serif;
     background-color: #fffaf0;
 }
+
 .max-width {
     width: 1284px;
     max-width: calc(100% - 60px); /* 최대너비가 부모기준 뷰포트 넓이를 넘지 않으며 양쪽 30px씩 여백 */
@@ -58,6 +93,37 @@ body {
     width: 156px;
 }
 
+header .login-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* index.html */
+header .login-text p strong {
+    font-family: 'Pretendard-Bold';
+    box-shadow: inset 0 -0.5em 0 rgba(255, 79, 110, 0.8);
+}
+
+@media (min-width: 601px) {
+    header .login-text p::after {
+        content: '|';
+        color: #d8ddde;
+        margin-left: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header .login-text p {
+        position: absolute;
+        top :140px;
+        right: 30;
+    }
+    header .login-text p::after {
+        display: none;
+    }
+}
+
 /* footer */
 .footer {
     text-align: center;
@@ -66,7 +132,7 @@ body {
 }
 
 /* 버튼 */
-.btn-join {
+[class^='btn'] { /* btn으로 시작하면 */
     /* a 태그(inline 속성)이기 때문에 width값과 height값을 가질 수 없어서 
     inline-block으로 바꿔줘야 한다. 
     flex 속성을 주면 자동으로 block요소 속성을 가진다. 
@@ -78,14 +144,24 @@ body {
     /* 아이콘을 background로 하는 이유 : 사용자에게 읽힐 필요가 없고 
     이미지가 변경될 일이 거의 없을 경우! img로 넣는것도 상관은 없다.
     이미지를 넣고, alt값 (회원가입)을 넣으면 된다 */
-    background-image: url(../img/icon-join.svg);
     background-repeat: no-repeat;
     background-size: 32px;
     background-position: 10px 50%;
     /* 글자를 가운데 정렬하기 위해 align-items 속성을 추가하고
     display inline-block->에서 inline-flex로 변경 
     inline-flex는 inline이면서 flex속성을 가진 것 */
-    align-items: center;    
+    align-items: center;
+}
+.btn-join {
+    background-image: url(../img/icon-join.svg);
+}
+
+.btn-login {
+    background-image: url(../img/icon-login.svg);
+}
+
+.btn-logout {
+    background-image: url(../img/icon-logout.svg);
 }
 
 /* 로그인 */
@@ -132,7 +208,7 @@ body {
 }
 
 /* 로그인 form */
-.form {
+.login .form {
     width: 392px;
     /* background-color: skyblue; */
     margin: 40px auto 50px;
@@ -146,7 +222,8 @@ body {
 .form input{
     width: 100%;
     height: 48px;
-    padding: 0;
+    padding: 10px;
+    box-sizing: border-box;
     border: 0;
     border-bottom: 1px solid #677880;
     border-radius: 4px 4px 0 0;
@@ -161,4 +238,18 @@ body {
     background-color: #29363d;
     color: #f4f5f5;
     border-radius: 4px;
+}
+
+/* textarea이 inline-block의 속성을 갖고 있기 때문에 */
+.form textarea {
+    display: block;
+    width: 100%;
+    /* aspect-ratio: 1/1; */
+    height: 360px;
+    border: 1px solid #677880;
+    border-radius: 4px;
+    resize: none;
+    box-sizing: border-box;
+    padding: 10px;
+    font: inherit;
 }
