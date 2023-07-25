@@ -1,0 +1,167 @@
+body,
+h1,
+p,
+a,
+form,
+input,
+button {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #bdbdbd;
+    display: flex;
+    height: 100vh;
+}
+
+.a11y-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+.wrapper {
+    border-radius: 10px;
+    border: 1px solid var(--c-4-c-4-c-4, #C4C4C4);
+    background-color: #FFF;
+    width: 520px;
+    height: 712px;
+    margin: auto auto;
+}
+
+input[type="text"],
+input[type="password"]
+{
+    display: block;
+    width: 472px;
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #C4C4C4;
+    padding: 0 16px;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    width: 472px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #767676;
+}
+.btn-login {
+    background: #2F80ED;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    margin-top: 21px;
+}
+.btn-gg {
+    background-image: url(images/google.svg);
+    background-repeat: no-repeat;
+    background-position: 11px;
+    border: 1px solid #767676;
+}
+.btn-fb {
+    background-image: url(images/facebook.svg);
+    background-repeat: no-repeat;
+    background-position: 11px;
+    border: 1px solid #2D9CDB;
+}
+.btn-nv {
+    background-image: url(images/naver.svg);
+    background-repeat: no-repeat;
+    background-position: 11px;
+    border: 1px solid #00BF18;
+}
+.btn-kk {
+    background-image: url(images/kakao.svg);
+    background-repeat: no-repeat;
+    background-position: 11px;
+    border: 1px solid #F2C94C;
+}
+.btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.line {
+    width: 520px;
+    height: 1px;
+    background: #C4C4C4;
+}
+.half-line {
+    width: 210px;
+    height: 1px;
+    background: #C4C4C4;
+}
+h1 {
+    margin: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+main > p {
+    margin: 24px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.form-login {
+    margin: 24px 24px 24px 20px;
+}
+.guide {
+    text-align: center;
+    color: #767676;
+    font-size: 14px;
+    font-weight: 400;
+}
+.guide>span {
+    margin: 8px;
+}
+.or {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 30px 0 20px 0;
+}
+.login-state {
+    color: #767676;
+    font-size: 16px;
+    font-weight: 500;
+}
+.login-state::before {
+    content: '';
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background-image: url('./images/check_login.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 8px;
+    vertical-align: -6px;
+}
+.login-chk:checked {
+    background-image: none;
+}
+.user-id {
+    margin-bottom: 10px;
+}
+.user-pw {
+    margin-bottom: 17px;
+}
+.hide {
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip-path: inset(50%);
+}
