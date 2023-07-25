@@ -1,21 +1,28 @@
-h1, p, img {
-    margin: initial;
+body, h1, p, img {
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-image: url('./images/bg.png');
+    display: flex;
+    height: 100vh;
+}
+.container {
+    margin: auto auto;
 }
 
 .box {
     width: 300px;
     background-color: #9C6035;
     display: block;
-    margin: 0 auto;
     border-bottom: 10px solid #46260E;
     border-radius: 0 0 30px 30px;
     color: #E8BC9C;
     font-size: 16px;
     font-weight: 400;
+    background-image: url(./images/green.png);
+    background-repeat: repeat-x;
 }
 
 .profile {
@@ -27,7 +34,7 @@ h1 {
     color: #FFF;
     font-size: 36px;
     font-weight: 700;
-    margin: 10px 20px;
+    padding: 60px 20px 0 20px;
 }
 
 p {
