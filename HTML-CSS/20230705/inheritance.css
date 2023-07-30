@@ -1,0 +1,9 @@
+
+section {
+    color: red;
+    border: 5px solid pink;
+}
+
+h1, h2 {
+    border: inherit;
+}

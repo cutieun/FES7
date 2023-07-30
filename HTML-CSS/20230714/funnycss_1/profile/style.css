@@ -1,0 +1,105 @@
+h1, h2, p, div, ul, a {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(./images/background.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper {
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.profile {
+    background-image: url(./images/cover04.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.profile img {
+    width: 150px;
+    margin-top: 80px;
+    border: 5px solid white;
+    border-radius: 200px / 100px;
+}
+
+.profile h1 {
+    text-align: center;
+    color: white;
+    margin: 15px;
+    font-size: 80px;
+}
+
+.profile p {
+    color: white;
+    border-top: 5px solid white;
+    width: fit-content;
+    padding: 10px 25px 50px 25px;
+    margin: 0 auto;
+}
+
+.contents {
+    background-color: #eaeaea;
+    padding: 20px 20px;
+}
+
+.section {
+    background-color: white;
+    text-align: initial;
+}
+
+.section:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.section h2{
+    color: deeppink;
+    padding: 20px 0 0 20px;
+}
+.section ul {
+    padding: 20px;
+}
+.section li {
+    display: inlin;
+    list-style-type: none;
+    padding: 3px 0px 3px 20px;
+    color: #999999;
+    border-left: 5px solid #999999;
+}
+
+.section.information{
+    background-image: url('./images/icon-information.png');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+}
+
+.section.skills{
+    background-image: url('./images/icon-skills.png');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+}
+
+.img-info {
+    position: relative;
+    float: right;
+}
+
+.footer {
+    background-color: #fff;
+    padding: 20px;
+}
+
+a {
+    margin: 0 5px;
+    color: #dddddd;
+    border: 1px solid #dddddd;
+    border-radius: 30px;
+    padding: 5px 20px;
+    vertical-align: middle;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>블록/인라인</title>
+    <style>
+      /*
+        1. 블록요소 (div, p, li, nav, footer)
+          - 블록 요소는 인라인 요소에 중첩될 수 없음
+          - 블록 요소는 줄바꿈되며 좌우 양측으로 모든 너비를 차지함
+          - width, height, padding, border, margin 속성 사용 가능
+
+        2. 인라인 요소 (a, em, strong)
+          - 블록 요소 안에 중첩 가능
+          - 콘텐츠의 흐름을 끊지 않음
+          - 줄바꿈이 없음
+          - width, height 크기 지정 불가
+          - padding, border, margin 속성 사용 가능하지만 margin은 좌우만 가능
+
+        3. 인라인블록 : 블록과 동일하되 줄바꿈이 없음
+      */
+      body {
+        margin: 0;
+      }
+
+      div,
+      span,
+      button {
+        border: 2px solid salmon;
+        padding: 20px;
+
+        /* 블록만 */
+        width: 200px;
+        height: 50px;
+
+        /*  margin: 인라인 요소는 상하적용 안됨 */
+        margin: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>안녕하세요</div>
+    <div>안녕하세요</div>
+    <span>안녕하세요</span>
+    <div>안녕하세요</div>
+    <div>
+      <span>안녕하세요</span>
+      <span>안녕하세요</span>
+      <span>안녕하세요</span>
+    </div>
+    <button>버튼</button>
+    <!-- <span>
+    <div>안녕하세요</div>
+    <div>안녕하세요</div>
+    <div>안녕하세요</div>
+  </span> -->
+  </body>
+</html>

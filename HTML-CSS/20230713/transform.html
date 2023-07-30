@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>transform</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: royalblue;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .box:nth-child(even) {
+        background-color: seagreen;
+      }
+
+      .scale {
+        /* transform-origin: 0 0; */
+        transition: all 3s;
+      }
+      .scale:hover {
+        /* transform: scale(2); */
+        /* transform: scaleX(1.2) scaleY(2);
+        transform: scale(1.2, 2); X축, Y축 */
+        /* transform: rotate(360deg); */
+        /* transform: rotate(2turn); */
+        /* transform: scale(-1, -2); */
+
+        /* translate의 기준점은 가운데임, 다른 것들은 transform-origin값에 따라 달라진다. */
+        /* transform: translate(-50px, 50px);
+        transform: translateX(50px) translateY(50px); */
+        /* transform: skew(30deg); */
+
+        /* 여러 효과 한번에 주기 */
+        transform: translate(10px, 10px) skew(20deg) rotate(0.5turn) scale(0.8);
+
+        /* 개별 속성으로 주기 */
+        /* rotate: 40deg;
+        scale: 2; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box scale">BOX</div>
+    <div class="box">BOX</div>
+  </body>
+</html>

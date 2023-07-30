@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스 꾸미기</title>
+    <style>
+      div {
+        box-sizing: border-box;
+        width: 150px;
+        height: 50px;
+        font-weight: bold;
+        font-size: larger;
+        text-align: center;
+        line-height: 50px;
+        margin: 20px;
+      }
+
+      .box1 {
+        background-color: rgb(177, 236, 242);
+        outline: 3px solid rgb(102, 173, 179);
+        border-top: 3px solid rgb(125, 208, 216);
+        border-left: 3px solid rgb(125, 208, 216);
+      }
+
+      .box2 {
+        background-color: rgb(188, 201, 114);
+        outline: 8px solid rgb(183, 190, 48);
+        border-top: 8px solid rgb(239, 255, 207);
+        border-left: 8px solid rgb(239, 255, 207);
+        width: 100px;
+        height: 40px;
+      }
+
+      .box3 {
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgba(255, 244, 202, 1) 0%,
+          rgba(59, 228, 179, 1) 100%,
+          rgba(0, 255, 233, 1) 100%
+        );
+        background-clip: padding-box;
+        border-radius: 30px;
+        border: 3px dashed rgba(52, 195, 152, 0.509);
+      }
+
+      .box4 {
+        border-radius: 0 40px 40px 40px;
+        box-shadow: rgba(0, 0, 0, 0.15) 10px 10px 15px;
+        border: 2px solid #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box1">Hello ✋</div>
+    <div class="box2"></div>
+    <div class="box3">Hello ✋</div>
+    <div class="box4">Hello ✋</div>
+  </body>
+</html>
