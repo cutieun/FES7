@@ -31,8 +31,8 @@ body {
     border: 1px solid var(--c-4-c-4-c-4, #C4C4C4);
     background-color: #FFF;
     width: 520px;
-    height: 712px;
     margin: auto auto;
+    padding-bottom: 25px;
 }
 
 input[type="text"],
@@ -46,7 +46,9 @@ input[type="password"]
     padding: 0 16px;
     box-sizing: border-box;
 }
-
+button:enabled {
+    cursor: pointer;
+}
 button {
     display: block;
     width: 472px;
@@ -150,18 +152,30 @@ main > p {
     margin-right: 8px;
     vertical-align: -6px;
 }
-.login-chk:checked {
-    background-image: none;
+.login-chk:checked + .login-state::before {
+    background-image: url('./images/checked_login.svg');
 }
 .user-id {
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 .user-pw {
-    margin-bottom: 17px;
+    /* margin-bottom: 17px; */
 }
 .hide {
     overflow: hidden;
     width: 1px;
     height: 1px;
     clip-path: inset(50%);
+}
+.warning-text {
+    color: #F4492E;
+    font-size: 14px;
+}
+form .warning-input {
+    border: 2px solid #F4492E;
+}
+.form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }

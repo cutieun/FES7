@@ -14,12 +14,18 @@
       <main>
         <p>위니브에서 여러분의 궁금증을 해결하세요! :)</p>
         <form class="form-login">
-          <label for="user-id" class="a11y-hidden">아이디</label>
-          <input type="text" placeholder="아이디" id="user-id" class="user-id" />
-          <label for="user-pw" class="a11y-hidden">비밀번호</label>
-          <input type="password" placeholder="비밀번호" id="user-pw" class="user-pw"/>
-          <input type="checkbox" id="login-state" class="login-chk hide"/>
-          <label for="login-state" class="login-state">로그인 상태 유지</label>
+          <div class="form-inputs">
+            <label for="user-id" class="a11y-hidden">아이디</label>
+            <input type="text" placeholder="아이디" id="user-id" class="user-id warning-input"/>
+            <p class="warning-text">아이디를 입력해 주세요.</p>
+            <label for="user-pw" class="a11y-hidden">비밀번호</label>
+            <input type="password" placeholder="비밀번호" id="user-pw" class="user-pw"/>
+            <p class="warning-text">아이디 혹은 비밀번호과 일치하지 않습니다.</p>
+            <div>
+              <input type="checkbox" id="login-state" class="login-chk hide"/>
+              <label for="login-state" class="login-state">로그인 상태 유지</label>
+            </div>
+          </div>
           <button type="button" class="btn-login">로그인</button>
         </form>
         <div class="guide">
@@ -39,5 +45,6 @@
         </section>
       </main>
     </div>
+    <script src="login.js"></script>
   </body>
 </html>
