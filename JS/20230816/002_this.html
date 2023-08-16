@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button id="btn1">클릭해봐요!</button>
+    <button id="btn2">클릭해봐요!</button>
+
+    <script>
+      function a() {
+        console.log(this);
+      }
+      // a();
+
+      const myObj = {
+        val1: 100,
+        func1() {
+          console.log(this);
+        },
+      };
+
+      const button1 = document.getElementById("btn1");
+      const button2 = document.getElementById("btn2");
+
+      button1.addEventListener("click", myObj.func1);
+      button2.addEventListener("click", myObj.func1);
+
+      // let test = myObj.func1;
+      // test();
+
+      // myObj.func1();
+
+      // addEventListener 함수의 경우 내부에서 인자로 실행되는 콜백 함수의 this 가 이벤트가 발생하는 요소를 가르키도록 되어 있다. 그래서 this 가 버튼을 가르키게된다. 단, 화살표 함수의 경우는 상위 스코프를 가르키기 때문에 window 객체를 가르키게 된다!
+    </script>
+  </body>
+</html>
