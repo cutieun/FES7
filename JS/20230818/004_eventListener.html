@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        background-color: black;
+        width: 500px;
+        height: 500px;
+        margin: auto;
+      }
+      ul {
+        width: 500px;
+        margin: 50px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .color-red {
+        background-color: red;
+      }
+      .color-yellow {
+        background-color: gold;
+      }
+      .color-green {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <ul>
+      <li><button class="btn-red">빨강</button></li>
+      <li><button class="btn-yellow">노랑</button></li>
+      <li><button class="btn-green">초록</button></li>
+    </ul>
+
+    <script>
+      const redBtn = document.querySelector(".btn-red");
+      const yellowBtn = document.querySelector(".btn-yellow");
+      const greenBtn = document.querySelector(".btn-green");
+      const box = document.querySelector(".box");
+
+      redBtn.addEventListener("click", function () {
+        box.classList.add("color-red");
+        box.classList.remove("color-yellow , color-green");
+      });
+      yellowBtn.addEventListener("click", function () {
+        box.classList.add("color-yellow");
+        box.classList.remove("color-red, color-green");
+      });
+      greenBtn.addEventListener("click", function () {
+        box.classList.add("color-green");
+        box.classList.remove("color-red, color-yellow");
+      });
+    </script>
+  </body>
+</html>
