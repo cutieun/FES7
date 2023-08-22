@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const me = {
+        name: "jieun",
+        balance: 1000000000,
+        salary: 100000000,
+        canProgramming: function () {
+          console.log("프로그래밍 가능");
+        },
+        getPaid: function () {
+          this.balance += this.salary;
+        },
+      };
+      const company = {
+        name: "Google",
+        location: "USA",
+        paySalary: function (person) {
+          person.getPaid();
+        },
+      };
+
+      company.paySalary(me);
+    </script>
+  </body>
+</html>
