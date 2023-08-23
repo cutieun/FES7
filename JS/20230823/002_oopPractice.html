@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      function Employee(name, balance, salary) {
+        this.name = name;
+        this.balance = balance;
+        this.salary = salary;
+      }
+      Employee.prototype.getPaid = function () {
+        this.balance += this.salary;
+        console.log(
+          `오늘의 월급 ${this.salary}원이 입금되었습니다. 현재 잔고는 ${this.balance} 입니다.`
+        );
+      };
+      const me = new Employee("jieun", 1000000000, 100000000);
+    </script>
+  </body>
+</html>

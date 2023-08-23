@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function NewFactory2(name) {
+        this.name = name;
+      }
+
+      NewFactory2.prototype.sayYourName = function () {
+        console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+      };
+
+      const robot = new NewFactory2("지은");
+
+      ////////////////////////////////////////////////
+      // 객체를 생성자함수를 통해서 생성해보기
+
+      function Me(name, address, phoneNum) {
+        this.name = name;
+        this.address = address;
+        this.phoneNum = phoneNum;
+      }
+
+      function Lion() {
+        this.level = 1;
+      }
+
+      Me.prototype.canWalk = function () {
+        console.log(`${this.name}이 걷는다.`);
+      };
+      Me.prototype.teaching = function (student) {
+        student.levelUp();
+      };
+      Lion.prototype.levelUp = function () {
+        this.level++;
+      };
+
+      const jieun = new Me("jieun", "incheon", "010-4000-0000");
+      const lion1 = new Lion();
+    </script>
+  </body>
+</html>
