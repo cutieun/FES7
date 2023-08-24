@@ -1,0 +1,26 @@
+.one {
+  color: red;
+}
+.one .two {
+  color: green;
+}
+.one .two .three {
+  color: blue;
+}
+.four {
+  color: pink;
+}
+
+.article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.article .article-content {
+  font-size: 14px;
+  opacity: 0.7;
+}
+i {
+  opacity: 0.5;
+}/*# sourceMappingURL=008_중첩벗어나기_at_root.css.map */

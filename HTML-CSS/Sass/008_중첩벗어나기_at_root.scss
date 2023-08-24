@@ -1,0 +1,42 @@
+// at-root은 효준강사님은 잘 사용하지 않는다.
+.one {
+    color: red;
+    .two {
+        color: green;
+        .three {
+            color: blue;
+        }
+        @at-root .four {
+            color: pink;
+        }
+    }
+}
+
+// .one {
+//     color: red;
+//     .two {
+//         color: green;
+//         .three {
+//             color: blue;
+//         }
+//     }
+// }
+// .four {
+//     color: pink;
+// }
+
+.article {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+
+    .article-content {
+        font-size: 14px;
+        opacity: 0.7;
+
+        @at-root i {
+            opacity: 0.5;
+        }
+    }
+}
