@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+        });
+
+        class Robot {
+
+            constructor(name, pw) {
+                this.name = name;
+                this._password = pw;
+            }
+
+            sayYourName() {
+                console.log(`삐리비리. 제 이름은 ${this.name}입니다. 주인님.`);
+            }
+
+            get password() {
+                return this._password
+            }
+
+            set password(pw) {
+                this._password = pw;
+            }
+        }
+
+        const robot = new Robot('lion', 1234);
+        // 생성자 안의 변수(this.password)와 set/get 메소드명(password)이 같을 경우 
+        // robot.password 하면 get password를 불러오는것과 같고
+        // this.password와 같기 때문에 무한루프 돌게 된다.
+    </script>
+</body>
+
+</html>
