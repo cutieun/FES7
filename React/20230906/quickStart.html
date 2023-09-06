@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      /* 
+      // react 컴포넌트 정의하기
+      const el = React.createElement;
+
+      class HelloButton extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = { liked: false };
+        }
+        render() {
+          if (this.state.liked) {
+            return <p>Hello World!</p>;
+          }
+
+          return (
+            <button onClick={() => this.setState({ liked: true })}>
+              Hello
+            </button>
+          );
+        }
+      } 
+      
+      const domContainer = document.querySelector("#root");
+      //react-dom UI 구성요소를 만들고 관리하는 목적의 라이브러리 입니다.
+      ReactDOM.render(el(HelloButton), domContainer);
+      */
+
+      // 함수형 컴포넌트
+      function HelloButton(props) {
+        const [text, setText] = React.useState("hello");
+
+        return (
+          // 화면에 랜더링 할 내용 작성
+          // 원래 script에서는 HTML 태그를 사용할 수 없다. 이것은 jsx 문법이다.
+          // jsx 문법에서 js 표현식을 사용하려면 중괄호를 먼저 써야한다.
+          <button onClick={() => setText("clicked!")}>{text}</button>
+        );
+      }
+
+      const app = (
+        // HelloButton : HTML 태그는 아닌데 사용자정의 태그처럼 사용할 수 있다.
+        <div>
+          <HelloButton />
+          <HelloButton />
+          <HelloButton />
+          <HelloButton />
+          <HelloButton />
+          <HelloButton />
+        </div>
+      );
+
+      const domContainer = document.querySelector("#root");
+      //react-dom UI 구성요소를 만들고 관리하는 목적의 라이브러리 입니다.
+      ReactDOM.render(app, domContainer);
+    </script>
+  </body>
+</html>

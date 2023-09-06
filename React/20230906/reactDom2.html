@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="root" class="container">
+      <h1>hello react</h1>
+      <a href="https:www.test.com">test site</a>
+    </div>
+
+    <script>
+      // 1. 처음 리액트가 나왔을 땐 아래와 같은 코드로 작성. 가독성도 안 좋고 코드가 너무 길다.
+      const tag = {
+        tag: "div",
+        props: {
+          id: "root",
+          className: "container",
+        },
+        children: [
+          {
+            tag: "div",
+            props: {
+              id: "root",
+              className: "container",
+            },
+            children: [
+              {
+                tag: "div",
+                props: {
+                  id: "root",
+                  className: "container",
+                },
+                children: [],
+              },
+            ],
+          },
+        ],
+      };
+
+      // 2. 리액트 사용하여 아래 코드처럼 간략하게 작성
+      function helloVdom() {
+        return React.createElement(
+          "h1",
+          { className: "container" },
+          "hello",
+          React.createElement("i", null, "welcome!")
+        );
+      }
+
+      // 3. JSX 문법
+      // 더 가독성 있게 표현하고 싶어서 jsx 문법을 사용
+      function helloJSX() {
+        return (
+          <h1 className="container">
+            hello <i>welcome!</i>
+          </h1>
+        );
+      }
+    </script>
+  </body>
+</html>
