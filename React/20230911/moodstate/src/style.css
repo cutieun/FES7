@@ -1,0 +1,26 @@
+.selectedMood {
+    height: 100px;
+    width: 400px;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+.selectedMood p {
+    text-align: center;
+}
+
+.mood {
+    padding: 0;
+}
+
+.mood li{
+    list-style: none;
+    width: 400px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #efeded;
+}
+
+.mood li:hover {
+    background-color: skyblue;
+}
